@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Chuyển đổi nhiệt độ</title>
 </head>
 <body>
-    <h1>Temperature Converter</h1>
-    <p> Type a value in the Fahrenheit field to convert the value to Celsius </p>
+    <h1>Bộ chuyển đổi nhiệt độ</h1>
+    <p> Nhập giá trị °F để chuyển đổi thành °C </p>
     <label> Fahrenheit :
-        <input type="number" id="input_fahrenheit" placeholder="Fahrenheit"
-               oninput="temperatureConverter(this.value)"
-               onchange="temperatureConverter(this.value)">
+        <input type="number" id="input_fahrenheit" placeholder="Nhập giá trị °F"
+               oninput="chuyen_doi_nhiet_do(this.value)"
+               onchange="chuyen_doi_nhiet_do(this.value)">
     </label>
-    <p>Celsius: <span id="outputCelsius"></span></p>
+    <p>Celsius: <span id="ket_qua_do_C"></span></p>
     <script>
-        function temperatureConverter(va_num) {
-            va_num = parseFloat(va_num);
-            document.getElementById("outputCelsius").innerHTML = (va_num - 32) / 1.8 + '';
+        function chuyen_doi_nhiet_do(num) {
+            num = parseFloat(num);
+            document.getElementById("ket_qua_do_C").innerHTML = (num - 32) / 1.8 + ' °C';
         }
     </script>
 </body>
